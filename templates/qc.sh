@@ -31,7 +31,7 @@ threads=${task.cpus}
 #  - audit trail
 
 echo "=========="
-echo $USER
+echo $userName
 date +%Y%m%d_%H%M%S
 echo "=========="
 echo "fastp version: "`fastp --version`

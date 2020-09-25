@@ -44,6 +44,8 @@ richness_iter           = params.richness_iter
 MSP_descr               = file(params.MSP_descr)
 outfolder               = params.outfolder
 
+USER                    = params.userName
+
 
 // =============================================================================================
 //     Channels

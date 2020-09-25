@@ -25,7 +25,7 @@ threads=${task.cpus}
 
 #  - audit trail
 echo "=========="
-echo $USER
+echo $userName
 date
 echo "=========="
 bam2jsoncounts.py --version

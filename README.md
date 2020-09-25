@@ -9,7 +9,7 @@ This nextflow workflow can be used to process shotgun metagenomic data and get g
 
 - clone the pipeline in the ngsmetagenomic folder  
 ```
-nextflow clone matthpich/ngsmetagenomic
+nextflow clone https://gitlab.com/matthpich/ngsmetagenomic.git ngsmetagenomic
 ```
 - run the pipeline
 ```

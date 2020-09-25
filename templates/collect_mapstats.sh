@@ -22,7 +22,7 @@ set -e
 
 #  - audit trail
 echo "=========="
-echo $USER
+echo $userName
 date
 echo "=========="
 echo "=========="

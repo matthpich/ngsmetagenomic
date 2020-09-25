@@ -44,7 +44,7 @@ richness_iter           = params.richness_iter
 MSP_descr               = file(params.MSP_descr)
 outfolder               = params.outfolder
 
-USER                    = workflow.userName
+userName                = workflow.userName
 
 
 // =============================================================================================

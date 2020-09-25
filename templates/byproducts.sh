@@ -31,7 +31,7 @@ ls -lh
 
 #  - audit trail
 echo "=========="
-echo $USER
+echo $userName
 date
 echo "=========="
 echo ${jsoncount_derivative_ref}

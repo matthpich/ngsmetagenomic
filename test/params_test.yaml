@@ -1,0 +1,17 @@
+query: "./ngsmetagenomic/test/sequencing_data"
+seqname_prefix: ""
+seqname_suffix: ".fq.gz"
+seqname_middle: ""
+seqNmax: 1
+
+trim_galore_arguments: "-phred33 --quality 0 --stringency 5 --length 50"
+trimmomatic_arguments: "HEADCROP:15 SLIDINGWINDOW:4:15 MINLEN:50"
+hostbwaindex: "./ngsmetagenomic/test/dummy_host/index/bwa"
+refbwaindex: "./ngsmetagenomic/test/dummy_reference/index/bwa"
+reffna: "./ngsmetagenomic/test/dummy_reference/dummy_reference.fna"
+refname: "dummy_reference"
+jsoncount_derivative_ref: "./ngsmetagenomic/test/derivatives.test.tsv"
+richness_target: 100000
+richness_iter: 30
+MSP_descr: "/Volumes/MP/Work/nfmap/reference/IGC/annot/MSP/modulestats/IGCprofilexMSP20180113.module_describe.gz"
+outfolder: "./ngsmetagenomic/test/output"

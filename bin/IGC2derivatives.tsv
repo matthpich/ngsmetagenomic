@@ -1,0 +1,4 @@
+derivative_name	db_filepathv	db_table	derivative_columns
+MSP	/db/dmp/microbiome/pub/IGC/MSP/20180113/MSP.db	MSP	msp_name,module_name
+eggNOG_OG	/db/dmp/microbiome/pub/IGC/annotationMOCAT2/IGC_eggNOG_OG.db	IGC_eggNOG_OG	eggNOG_OG
+KEGG_ko	/db/dmp/microbiome/pub/IGC/annotationMOCAT2/IGC_KEGG_ko.db	 IGC_KEGG_ko	KEGG_ko

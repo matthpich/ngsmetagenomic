@@ -1,0 +1,2 @@
+derivative_name	db_filepathv	db_table	derivative_columns
+MSP	../../../ngsmetagenomic/test/dummy_reference/annotation/MSP/MSP_test.tsv.gz	MSP	msp_name,module_name

@@ -35,7 +35,7 @@ pip install --no-cache-dir pysamstats
 
 #  - audit trail
 echo "=========="
-echo $USER
+echo $userName
 date
 echo "=========="
 bwa 2>&1 >/dev/null | head -n 4 |tail -n +2

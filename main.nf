@@ -58,13 +58,7 @@ println(query_path.isDirectory())
 
 switch (query) {
 
-    case { query_path.isDirectory() }:
-        seqdataChannel = Channel
-            .fromFilePairs("${query_path}/${seqname_prefix}*${seqname_middle}{1,2}${seqname_suffix}", flat: false)
-            .take(seqNmax)
-        break
-
-    case { query.startsWith("s3://") or query.startsWith("S3://") }:
+    case { query_path.isDirectory() or query.startsWith("s3://") or query.startsWith("S3://") }:
         seqdataChannel = Channel
             .fromFilePairs("${query_path}/${seqname_prefix}*${seqname_middle}{1,2}${seqname_suffix}", flat: false)
             .take(seqNmax)

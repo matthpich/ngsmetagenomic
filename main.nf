@@ -110,7 +110,7 @@ process qc {
         set val(sampleid), file("${sampleid}_QCed_pair1.fq.gz"), file("${sampleid}_QCed_pair2.fq.gz"), file("${sampleid}_QCed_single.fq.gz") into qceddataChannel
         set val(sampleid), file("fastp.json"), file("host*.log") into seqstatsChannel1
         file(".command.sh")
-        file(".command.log")
+        //file(".command.log")
         file(".command.out")
 
     script:

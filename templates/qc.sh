@@ -82,7 +82,7 @@ mv 2.host/${sampleid}_host_single_notinref_1.fq ${sampleid}_QCed_single.fq
 pigz -p \${threads} ${sampleid}_QCed_{pair1,pair2,single}.fq
 
 # - clean up
-rm -rf 1.fastp 2.host
-rm -f ${hostbwaallindex_base}*
+#rm -rf 1.fastp 2.host
+#rm -f ${hostbwaallindex_base}*
 
 sleep 1

@@ -100,7 +100,8 @@ process qc {
 
     tag         { "${sampleid}" }
     label       "qc"
-    storeDir  "${outfolder}/1.qc/${sampleid}"
+    //storeDir  "${outfolder}/1.qc/${sampleid}"
+    publishDir  "${outfolder}/1.qc/${sampleid}", mode: 'copy'
 
     input:
         set val(sampleid), file(reads_l) from seqdataChannel
@@ -131,7 +132,8 @@ process map {
 
     tag       { "${sampleid}" }
     label     "map"
-    storeDir "${outfolder}/2.mapx${refname}/${sampleid}"
+    //storeDir "${outfolder}/2.mapx${refname}/${sampleid}"
+    publishDir "${outfolder}/2.mapx${refname}/${sampleid}", mode: 'copy'
 
     input:
         set val(sampleid), file(pair1), file(pair2), file(single) from qceddataChannel

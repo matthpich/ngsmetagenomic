@@ -46,21 +46,21 @@ echo "=========="
 sam_filter.py --version
 echo "=========="
 
-mkdir ref
-mv *.{amb,ann,bwt,pac,sa} ref/
+#mkdir ref
+#mv *.{amb,ann,bwt,pac,sa} ref/
 
 #   - map
 echo "${sampleid}x${refname}.paired.bam"
 Ninputpairs1=`read_count.py ${pair1}` 
 #Ninputpairs2=`read_count.py ${pair2}` # if Ninputpairs1 != Ninputpairs2, bwa will complain anyways
-bwa mem -t\${threads} "ref/${refbwaallindex_base}" ${pair1} ${pair2} | samtools view -Sh -F4 - |sam_filter.py -l 50 -c 0 -p .95 - |grep .|grep -v "^#" > tmp
+bwa mem -t\${threads} "${refbwaindex_fullpath}" ${pair1} ${pair2} | samtools view -Sh -F4 - |sam_filter.py -l 50 -c 0 -p .95 - |grep .|grep -v "^#" > tmp
 cat tmp | samtools view -H  - > tmp.header.sam
 cat tmp | samtools view -bS - > tmp.paired.prelim.bam
 Nmappedpairs=`samtools view tmp.paired.prelim.bam | awk '\$2!="*"' | cut -f 1 | sort | uniq | wc -l`
 
 echo "${sampleid}x${refname}.single.bam"
 Ninputsingle=`read_count.py ${single}`
-bwa mem -t\${threads} "ref/${refbwaallindex_base}" ${single}        | samtools view -Sh -F4 - |sam_filter.py -l 50 -c 0 -p .95 - |grep .|grep -v "^#" > tmp
+bwa mem -t\${threads} "${refbwaindex_fullpath}" ${single}        | samtools view -Sh -F4 - |sam_filter.py -l 50 -c 0 -p .95 - |grep .|grep -v "^#" > tmp
 cat tmp | samtools view -H  - > tmp.header.sam
 cat tmp | samtools view -bS - > tmp.single.prelim.bam
 Nmappedsingle=`samtools view tmp.single.prelim.bam | awk '\$2!="*"' | cut -f 1 | sort | uniq | wc -l`
